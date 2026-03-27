@@ -4,160 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet"/>
-    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="carousel.css" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            background-color:rgba(10, 10, 10, 1);
-            margin: 0;
-            padding: 0; 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        header {
-            position: sticky;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 15px 5%;
-            background-color: rgba(10, 10, 10, 1);
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 100;
-        }
-        nav {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            list-style: none;
-            gap: 10px;
-            margin: 5px;
-        }
-        a {
-            text-decoration: none;
-            color: white;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 1.2rem;
-            font-weight: 500;
-            padding: 5px;
-            display: block;
-        }
-        a:hover {
-            background-color:rgba(49, 49, 49, 1);
-            border-radius: 8px;
-            color: white ;
-        }
-        .search-container {
-            display: flex;
-            align-items: center;
-            text-align: center;
-            width: 50%;
-            margin-left: -15px;
-        }
-        .search-bar {
-            border: 1px solid  rgba(255, 255, 255, 1);
-            border-radius: 5px;
-            color: white;
-            padding: 8px;
-            font-size: 1.2rem;
-            width: 100%;
-            margin-left: -20%;
-            background-color: transparent;
-        }
-        .search-btn {
-            border: 1px solid  rgba(255, 255, 255, 1);
-            border-radius: 5px;
-            font-size: 1.2rem;
-            margin-right: -20%;
-            width: 30%;
-            background-color: transparent;
-            color: white;
-            padding: 8px;
-        }  
-        .search-btn:hover {
-            background-color:  rgba(255, 255, 255, 1);
-            color: black ;
-        }
-        .prof-cart {
-            display: flex;
-            gap: 10px;
-            align-items: right;
-            text-align: right;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        .product-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-          gap: 20px;
-          width: 90%;
-          margin: auto;
-          padding: 20px;
-        }
-        .product-card {
-          width: 100%;
-          margin: auto;
-          padding: 20px;
-          border: 1px solid rgba(63, 62, 62, 0.1);
-          background: #fff;
-          border-radius: 12px;
-          box-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
-          font-family: Arial, sans-serif;
-        }
-        .product-img-holder {
-          width: 100%;
-          height: 250px;
-          overflow: hidden;
-          margin-bottom: 15px;
-        }
-        .product-img-holder {
-          height: 200px;
-        }
-        @media(max-width: 500px) {
-          .product-img-holder {
-            height: 160px;
-          }
-        }
-        .product-img-holder img {
-          width:100%;
-          height: 100%;
-          object-fit: cover;
-        }
-        .label-box {
-          align-items: center;
-          font-size: 18px;
-          padding: 3px;
-          margin: 3px;
-          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        }
-        .btn-group {
-          padding: 10px;
-          gap: 15px;
-        }
-        .add-cart, .buy-now {
-          border: 1px solid  rgba(0, 0, 0, 1);
-          border-radius: 5px;
-          font-family: Arial, Helvetica, sans-serif;
-          font-size: 0.9rem;
-          background-color: rgba(255, 255, 255, 1);
-          color:black;
-          padding: 9px;
-          margin: 5px;
-          cursor: pointer;
-        }
-        .add-cart:hover,.buy-now:hover {
-          background-color: rgba(0, 0, 0, 1);
-          color: white ;
-          font-weight: 500;
-        }
-
-      /* modal */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+body {
+  background-color:rgba(10, 10, 10, 1);
+  margin: 0;
+  padding: 0; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 10px 5%;
+  background-color: rgba(10, 10, 10, 1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+    }
+.product-card {
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid rgba(63, 62, 62, 0.1);
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
+  font-family: Arial, sans-serif;
+}
+.product-img-holder {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+.product-img-holder {
+  height: 200px;
+}
+@media(max-width: 500px) {
+  .product-img-holder {
+    height: 160px;
+    }
+}
+.product-img-holder img {
+  width:100%;
+  height: 100%;
+  object-fit: cover;
+}
+.label-box {
+  align-items: center;
+  font-size: 18px;
+  padding: 3px;
+  margin: 3px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.btn-group {
+  padding: 10px;
+  gap: 15px;
+}
+.add-cart, .buy-now {
+  border: 1px solid  rgba(0, 0, 0, 1);
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  background-color: rgba(255, 255, 255, 1);
+  color:black;
+  padding: 9px;
+  margin: 5px;
+  cursor: pointer;
+}
+.add-cart:hover,.buy-now:hover {
+  background-color: rgba(0, 0, 0, 1);
+  color: white ;
+  font-weight: 500;
+}
 .modal-product {
   width: 50%;
   max-width: 600px;
@@ -295,43 +228,29 @@
 
 .modal-close-btn:hover {
     background: #e0e0e0;
-}  
+} 
 hr {
-color: white;
-margin: 5px;
+  color: white;
+  margin:5px;
 }
 footer{
-color: white;
-text-align: center;
+  color: white;
+  text-align: center;
+}
+.carousel-image {
+  height: 600px;
+  object-fit: cover;
+}
+
+@media (max-width: 700px) {
+  .carousel-image {
+    height: 100%;
+  }
 }
       </style>
-    
 </head>
 <body>
- <header>
-        <div class="nav-container">  
-        <nav class="nav-bar">
-            <a href="#" class="link">Logo</a>
-        </nav>
-        </div>
-         <div class="prof-cart">
-           <a href="prac.php" class="link">Home</a>
-            <a href="aboutUs.php" class="link">About Us</a>
-            <a href="contact.php" class="link">Contact</a>
-             <a href="products.php" class="link">Products</a>
-
-        </div> 
-         <!--
-       <div class="search-container">
-            <form>
-            <input type="search" class="search-bar" placeholder="Search" aria-label="Search">
-            <button type="submit" class="search-btn">Search</button>
-        </form>
-      </div>  -->
-        </header>   
-        <hr>
-
-        <section>
+   <section>
 
       <?php 
         include 'db.php';
@@ -479,7 +398,6 @@ text-align: center;
       document.getElementById('productModal').classList.add('open');
     }
 
-     
     
     function closeProductModal() {
       document.getElementById('productModal').classList.remove('open');
